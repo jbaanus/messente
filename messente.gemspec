@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{messente}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Mika Tuupola"]
-  s.date = %q{2011-03-29}
+  s.authors = ["Mika Tuupola", "Jaanus Rõõmus"]
+  s.date = %q{2017-04-05}
   s.description = %q{Messente enables you to send SMS messages from Ruby applications.}
-  s.email = %q{tuupola@appelsiini.net}
+  s.email = %q{jaanus.roomus@messente.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_messente.rb"
   ]
-  s.homepage = %q{http://github.com/tuupola/messente}
+  s.homepage = %q{https://github.com/jbaanus/messente-ruby}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}

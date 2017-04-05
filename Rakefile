@@ -13,12 +13,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "messente"
-  gem.homepage = "http://github.com/tuupola/messente"
+  gem.homepage = "https://github.com/jbaanus/messente-ruby"
   gem.license = "MIT"
   gem.summary = %Q{An object-oriented Ruby wrapper for the Messente HTTP API.}
   gem.description = %Q{Messente enables you to send SMS messages from Ruby applications.}
-  gem.email = "tuupola@appelsiini.net"
-  gem.authors = ["Mika Tuupola"]
+  gem.email = "jaanus.roomus@messente.com"
+  gem.authors = ["Mika Tuupola", "Jaanus Rõõmus"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
