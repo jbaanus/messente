@@ -5,7 +5,7 @@ class Messente
   
   include HTTParty
   
-  base_uri "https://messente.com/api"
+  base_uri "https://api2.messente.com/"
   
   def initialize(options)
     @defaults = options
@@ -14,25 +14,26 @@ class Messente
   def send(options)
     query = @defaults.merge(options)
     
-    response = self.class.get("/send_sms_get", :query => query)
+    response = self.class.get("/send_sms/", :query => query)
     items    = response.split(" ")  
-    return false if ("ERROR" == items[0])
+    return false if ("ERROR" == items[0] or "FAILED" == item[0])
      
-    {:id => items[1], :price => items[2].to_f}
+    {:sms_unique_id => items[1]}
   end
   
   def balance
-    response = self.class.get("/get_balance/#{@defaults[:user]}/#{@defaults[:api_key]}")
+    response = self.class.get("/get_balance/", :query => @defaults)
     items    = response.split(" ")
-    return false if ("ERROR" == items[0])
+    return false if ("ERROR" == items[0] or "FAILED" == item[0])
 
     items[1].to_f
   end
   
   def report(options) 
-    response = self.class.get("/get_dlr_response/#{@defaults[:user]}/#{@defaults[:api_key]}/#{options[:id]}")
+	query = @defaults.merge(options)
+    response = self.class.get("/get_dlr_response/", :query => query)
     pp items    = response.split(" ")
-    return false if ("ERROR" == items[0])
+    return false if ("ERROR" == items[0] or "FAILED" == item[0])
     
     items[1] 
   end 
